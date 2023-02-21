@@ -1,8 +1,10 @@
 import inquirer from 'inquirer';
 import fs from 'fs/promises';
 
+const contributionsGuidlines = [];
+
 // prompt returns a promise
-let { title, description, licence } = await inquirer
+let { title, description, installation, usage, contribution, tests, licence, username, email } = await inquirer
     .prompt([
         {
             type: 'input',
@@ -15,34 +17,72 @@ let { title, description, licence } = await inquirer
             message: "Write a description of your project",
         },
         {
+            type: 'input',
+            name: 'installation',
+            message: "What are the installation instructions?",
+        },
+        {
+            type: 'input',
+            name: 'usage',
+            message: "How is the application used?",
+        },
+        {
+            type: 'input',
+            name: 'tests',
+            message: "What are the instructions for testing?",
+        },
+        {
             type: 'list',
             name: 'licence',
             message: 'What licence do you need for this app?',
             choices: ['Apache 2.0 License', 'BSD', 'GNU GPL v3', 'MIT', 'The Unlicense']
-          }
+        },        
+        {
+            type: 'input',
+            name: 'username',
+            message: "What is your Github username?",
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: "What is the email address associated with your github account?",
+        },
     ]);
 
 let readmeText = `
 # ${title}
 
-# Project Description
+## Project Description
+
 ${description}
 
-# Table Of Contents
 
-# Installation
 
-# Usage
+## Installation
 
-# Licence
+${installation}
+
+## Usage
+
+${usage}
+
+## Contributing
+
+${contribution}
+
+## Tests
+
+${tests}
+
+## Licence
 
 ${generateLicence(licence)}
 
-# Contributing
+## Questions
 
-# Tests
+### This app was created by [Mike Davies](https://github.com/${username})
 
-# Questions
+### If you have any further questions, please contact me at <${email}>
 `
 
 fs.writeFile('README.md', readmeText)
@@ -68,3 +108,5 @@ function generateLicence(licence) {
             break;
     }
 }
+
+
