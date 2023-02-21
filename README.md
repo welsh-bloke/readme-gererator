@@ -1,40 +1,34 @@
-# Readme Generator
+# Module 11 Challenge: Readme Generator
 
-## Project Description
+## Overview
 
-A command line application using inquirer.js for creating a professional README.md file
+The Readme Generator web app was created using Inquirer.js. It generates a series of questions in the terminal, and when complete, generates a professional README.md file. The app generates a README.md file with the following sections:
 
-## Table Of Contents
+- [Project title]
+- [Project description]
+- [A Table Of Contents linking to each section]
+- [Installation guide]
+- [Usage]
+- [Contributing]
+- [Tests]
+- [Licence]
+- [Questions]
 
-1. [Installation](#installation)
-2. [Usage](#usage)
-3. [Contributing](#contributing)
-4. [Tests](#tests)
-5. [Licence](#licence)
-6. [Questions](#questions)
+After all questions have been answered, the terminal looks like the following screenshot:
 
-## Installation
+## Screenshot Of Terminal
 
-Clone the repo from https://github.com/welsh-bloke/readme-gererator and run npm init to install dependencies
+<img src="./Screenshot.png" width="600">
+
+## Deployment
+
+This app was not deployed
 
 ## Usage
 
-From the root of the app, use the terminal to run 'node index.mjs' and answer questions
+Open the app in a terminal and run 'node index.mjs
 
-## Contributing
+## License
 
-Any contributions you make will be under the MIT Software License
-
-## Tests
-
-Just run the app as explained in the ‘usage’ section and verify the output
-
-## Licence
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-## Questions
-
-### This app was created by [Mike Davies](https://github.com/welsh-bloke)
-
-### If you have any further questions, please contact me at <mike@netly.co.uk>
+![GitHub](https://img.shields.io/github/license/welsh-bloke/prework-study-guide?logo=GitHub&style=flat-square)
+Please refer to the LICENSE in the repo.
