@@ -28,6 +28,11 @@ let { title, description, installation, usage, contribution, tests, licence, use
         },
         {
             type: 'input',
+            name: 'contribution',
+            message: "How to contribute to this project?",
+        },
+        {
+            type: 'input',
             name: 'tests',
             message: "What are the instructions for testing?",
         },
